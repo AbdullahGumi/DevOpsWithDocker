@@ -1,0 +1,15 @@
+>docker exec -it zealous_brattain bash
+root@19924ef9cd25:/usr/src/app# tail -f ./text.log
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-07-07 14:30:53 +0000 UTC
+2021-07-07 14:30:55 +0000 UTC
+2021-07-07 14:30:57 +0000 UTC
+2021-07-07 14:30:59 +0000 UTC
+2021-07-07 14:31:01 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-07-07 14:31:03 +0000 UTC
+2021-07-07 14:31:05 +0000 UTC
+2021-07-07 14:31:07 +0000 UTC
+2021-07-07 14:31:09 +0000 UTC
+2021-07-07 14:31:11 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
