@@ -1,0 +1,21 @@
+>docker run -d -it devopsdockeruh/simple-web-service:alpine
+Unable to find image 'devopsdockeruh/simple-web-service:alpine' locally
+alpine: Pulling from devopsdockeruh/simple-web-service
+ba3557a56b15: Pull complete
+1dace236434b: Pull complete
+4f4fb700ef54: Pull complete
+Digest: sha256:dd4d367476f86b7d7579d3379fe446ae5dfce25480903fb0966fc2e5257e0543
+Status: Downloaded newer image for devopsdockeruh/simple-web-service:alpine
+9f872270990c8de707bd0b424aa1cd105046de5f6294a93e5f143e7a98293870
+
+>docker exec -it mystifying_yalow sh
+/usr/src/app # tail -f ./text.log
+2021-07-08 11:18:07 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2021-07-08 11:18:09 +0000 UTC
+2021-07-08 11:18:11 +0000 UTC
+2021-07-08 11:18:13 +0000 UTC
+2021-07-08 11:18:15 +0000 UTC
+2021-07-08 11:18:17 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+
