@@ -1,0 +1,23 @@
+#dockerfile
+
+FROM golang:1.16
+
+EXPOSE 8080
+
+WORKDIR /usr/src/app
+
+COPY . .
+
+RUN go build
+
+RUN go test ./...
+
+
+ENV PORT=8080
+
+ENV REQUEST_ORIGIN=https://example.com
+
+CMD ["./server"]
+
+#command used 
+docker build . -t example-backend && docker run -p 8080:8080 example-backend	
