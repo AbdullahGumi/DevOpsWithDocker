@@ -1,0 +1,25 @@
+# Smart-Box
+This smart box app uses AI to detect faces and apparels in an image
+
+## Installation and setup instructions
+You need ```Node``` and ```npm``` installed on your machine!
+
+#### install required dependencies
+To install required dependencies run:
+
+```npm install```
+
+#### Start Application In Development Mode 
+
+```npm start```
+
+#### Build Application 
+
+```npm run build```
+
+
+This project runs on ```localhost:3000```
+
+Link to the project in docker hub: 
+https://hub.docker.com/r/abdulgumi/smart-box
+
