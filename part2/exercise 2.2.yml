@@ -1,0 +1,11 @@
+version: '3.5'
+
+services: 
+     web-server: 
+          image: devopsdockeruh/simple-web-service 
+          build: . 
+          volumes: [ ./log/text.log:/usr/src/app/text.log]
+          container_name: web-server-container
+          command: server
+
+          
