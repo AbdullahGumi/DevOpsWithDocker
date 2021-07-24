@@ -1,0 +1,22 @@
+version: '3.5'
+
+services: 
+     example-backend:
+          build: 
+               context: ./example-backend
+               dockerfile: Dockerfile
+          environment: 
+               REDIS_HOST: redis
+          depends_on: [redis]    
+          ports: ["8080:8080"]
+          command: "./server"
+     example-frontend:
+          build: 
+               context: ./example-frontend
+               dockerfile: Dockerfile
+          ports: ["5000:5000"]
+          command: ["serve", "-s", "-l", "5000", "build"]
+     redis:
+          container_name: rds
+          image: redis
+          restart: unless-stopped     
