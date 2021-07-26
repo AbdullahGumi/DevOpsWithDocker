@@ -1,0 +1,28 @@
+version: '3.5'
+
+services: 
+     example-backend:
+          build: ./example-backend
+          environment: 
+               REDIS_HOST: redis
+               POSTGRES_HOST: postgres
+          depends_on: [redis, postgres]    
+          ports: ["8080:8080"]
+          command: "./server"
+     example-frontend:
+          build: ./example-frontend
+          ports: ["5000:5000"]
+          command: ["serve", "-s", "-l", "5000", "build"]
+     redis:
+          container_name: rds
+          image: redis
+          restart: unless-stopped  
+          volumes: [./redis:/data]        
+     postgres:
+          container_name: postgres
+          image: postgres
+          environment:
+               POSTGRES_USER: postgres
+               POSTGRES_PASSWORD: postgres
+               POSTGRES_DATABASE: postgres     
+          volumes: [./database:/var/lib/postgresql/data] 
